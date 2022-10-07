@@ -47,6 +47,32 @@ vector<int> findPlaceable(int arr[9][9], int row, int col) //Finds the placeable
     return cps;
 }
 
+void copyArray(int arr[9][9], int arrCopy[9][9])
+{
+    for(int y= 0; y<9;y++)
+        for(int x= 0; x<9;x++)
+            arrCopy[y][x] = arr[y][x];
+}
+
+bool solveSudoku(int arr[9][9], int row, int col)
+{
+    if(row > 8 ) return true;
+
+    vector<int> placeables = findPlaceable(arr,row,col);
+
+    if (placeables.size() == 0) return false;
+
+    bool status = false;
+
+    for(int i = 0; i < placeables.size(); i++)
+    {
+        int n = placeables[i];
+    }
+
+
+    return status;
+}
+
 
 
 int main()
